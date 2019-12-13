@@ -1,4 +1,12 @@
-# dialed-in
+# Dialed-In :stopwatch: => :ok_man:
+ const dialedIn = if (:cloud_with_snow::snowflake: && :thinking: && :stopwatch:) {
+    const [:smiley: , :tram:] = :snowboarder: 
+    return :stuck_out_tongue_closed_eyes::call_me_hand:
+ } else {
+    const [:man_shrugging: , :frowning_man:] = :confused::beers::slightly_frowning_face: 
+    return :man_facepalming:
+ }
+   
 
 # Introduction
 ## Visualizing Weather Data
