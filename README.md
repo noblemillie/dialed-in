@@ -39,10 +39,10 @@ If already installed, fire it up with the following terminal command:
 
 ## Sources
 ### Temperature Data
-Temperature data collected from the [World Weather](http://worldweatheronline.com) API
+Temperature data collected from the [World Weather](http://worldweatheronline.com) API using the following endpoints:
 	
-### World Weather API Endpoints Used
-| Endpoint Path | Endpoint Description                                                |
+##### Database Endpoints
+| Endpoint Path | Data Description                                                    |
 | ------------- | ------------------------------------------------------------------- |
 | "maxtempF"    | Highest temperature recorded that day for the calendar date queried |
 | "mintempF"    | Lowest temperature recorded that day for the calendar date queried  |
@@ -51,9 +51,9 @@ Temperature data collected from the [World Weather](http://worldweatheronline.co
 
 
 ### Snowfall Data
-I scraped snowfall data for the last seven ski seasons from the Squaw Valley Alpine Meadows [website](https://squawalpine.com/mountain-information/squaw-valley-snowfall-tracker/) and converted the table data to json using a handy online csv-to-json converter [tool](https://www.csvjson.com/csv2json)
+I scraped snowfall data for the last seven ski seasons from the Squaw Valley Alpine Meadows [website](https://squawalpine.com/mountain-information/squaw-valley-snowfall-tracker/) and converted the table data to json using a handy online csv-to-json converter [tool](https://www.csvjson.com/csv2json). Data collected from the following table columns:
 
-| Endpoint Path    | Endpoint Description                                                                                      |
+| Column Name      | Data Description                                                                                          |
 | ---------------- | --------------------------------------------------------------------------------------------------------- |
 | 6,200-24hr       | Single-day total snowfall recorded by instruments at 6,200ft elevation  (base of the mountain)            |
 | 6,200-Cumulative | Cumulative ski-season total snowfall recorded by instruments at 6,200ft elevation  (base of the mountain) |
