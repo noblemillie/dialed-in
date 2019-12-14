@@ -1,12 +1,5 @@
-# Dialed-In :stopwatch: => :ok_man:
- const dialedIn = if (:cloud_with_snow::snowflake: && :thinking: && :stopwatch:) {
-    const [:smiley: , :tram:] = :snowboarder: 
-    return :stuck_out_tongue_closed_eyes::call_me_hand:
- } else {
-    const [:man_shrugging: , :frowning_man:] = :confused::beers::slightly_frowning_face: 
-    return :man_facepalming:
- }
-   
+# :stopwatch:Winter Dial
+Dialed-In ? :snowflake::ok_man: : :cloud_with_lightning_and_rain::no_good_man:
 
 # Introduction
 ## Visualizing Weather Data
@@ -17,7 +10,25 @@ A weather radial is an efficient representation of a geolocation's weather over 
 A weather radial is akin to clock :clock2: , with the fundamental difference being the amount of time represented over the circle's 360 degrees. Where standard analog clocks uses 1/12 of the circle to denominate the passage of 1 hour, weather radials use 1/12 of the circle to denominate 1 month. Hence, instead of the ticks between the hours representing minutes of the hour, the ticks 
 	represent days of the month.
 
+# Usage
+See the weather patterns, plan ski/snowboard trip accordingly, live the dream. 
 
+Or, for those who prefer emojii-based story-telling:
+
+ const dialedIn = if (:cloud_with_snow: && :thinking: && :stopwatch:) {
+
+    const [ :smiley: , :tram: ] = :snowboarder: 
+
+    return   :stuck_out_tongue_closed_eyes::call_me_hand:
+
+ } else {
+
+    const [ :man_shrugging: , :frowning_man: ] = :confused::beers::slightly_frowning_face: 
+ 
+    return :man_facepalming:
+
+ }
+   
 
 ## Quick Start
 The following terminal commands will clone this repository onto your local machine and open up a local instance of the code in your browser, allowing you to freely modify the code however you like in your text editor of choice (I use VSCode).
