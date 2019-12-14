@@ -9,10 +9,11 @@ A weather radial is akin to clock :clock2: , with the fundamental difference bei
 	represent days of the month.
 
 ## Are there any ifs to be aware of?
+Just this one:
 <!-- >#  :stopwatch: ``` === isDialedIn  ? ```
 ># ?   :snowflake: :ok_man: :snowflake:  ```:```
 ># :   :cloud_with_lightning_and_rain: :no_good_man: :cloud_with_lightning_and_rain:   ```;``` -->
->## :stopwatch: ``` === dialedIn  ? ``` :snowflake: :ok_man: ```:```   :cloud_with_lightning_and_rain: :no_good_man: ```;```
+>### :stopwatch: ``` === dialedIn  ? ``` :snowflake: :ok_man: ```:```   :cloud_with_lightning_and_rain: :no_good_man: ```;```
 
 
 # Usage
@@ -20,16 +21,16 @@ See the weather patterns, plan ski/snowboard trip accordingly, live the dream.
 
 Or, for those who prefer emojii-based story-telling:
 
-> # ``` const isDialedIn = if( ``` :cloud_with_snow: && :thinking: && :stopwatch: ```) { ```
-> ## ```const [ ``` :smiley: , :business_suit_levitating: ```] = ``` :tram: :mountain_snow: :snowboarder: :skier: :mountain_snow:
-> ## ``` return ``` :stuck_out_tongue_closed_eyes: :call_me_hand:
+> ## ``` const isDialedIn = if( ``` :cloud_with_snow: && :thinking: && :stopwatch: ```) { ```
+> ### ```const [ ``` :smiley: , :business_suit_levitating: ```] = ``` :tram: :mountain_snow: :snowboarder: :skier: :mountain_snow:
+> ### ``` return ``` :stuck_out_tongue_closed_eyes: :call_me_hand:
 > 
-> ### ``` } else { ```
+> #### ``` } else { ```
 > 
-> ## ``` const [ ``` :man_shrugging: , :frowning_man: ```] = ```:confused::beers::slightly_frowning_face: 
-> ## ``` return ``` :man_facepalming:
+> ### ``` const [ ``` :man_shrugging: , :frowning_man: ```] = ```:confused::beers::slightly_frowning_face: 
+> ### ``` return ``` :man_facepalming:
 > 
-> # ```}```   
+> ## ```}```   
    
 
 ## Quick Start
