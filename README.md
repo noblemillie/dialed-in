@@ -14,7 +14,7 @@ Just this one:
 <!-- >#  :stopwatch: ``` === isDialedIn  ? ```
 ># ?   :snowflake: :ok_man: :snowflake:  ```:```
 ># :   :cloud_with_lightning_and_rain: :no_good_man: :cloud_with_lightning_and_rain:   ```;``` -->
-###   :stopwatch: ```javascript  === isDialedIn  ? ``` :snowflake: :ok_man: ```javascript:```   :cloud_with_lightning_and_rain: :no_good_man: ```javascript;```
+### :stopwatch: ```  === isDialedIn  ? ``` :snowflake::ok_man::snowflake: ``` : ```   :cloud_with_lightning_and_rain::no_good_man::cloud_with_lightning_and_rain: ``` ; ```
 
 
 # Usage
