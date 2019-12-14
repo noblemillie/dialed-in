@@ -1,0 +1,7 @@
+{
+    "css.completion.completePropertyWithSemicolon": false,
+    "editor.fontSize": 24,
+    "editor.fontWeight": "100",
+    "font-switcher.enableLivePreview": true,
+    "editor.fontFamily": "Fira Code Mono, monospace"
+}
