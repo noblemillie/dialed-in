@@ -1,8 +1,8 @@
 # Winter Dial:stopwatch:
 ## What if
 (:stopwatch: === dialedIn)
-#? :snowflake::ok_man: 
-#: :cloud_with_lightning_and_rain::no_good_man:
+# ? :snowflake::ok_man: 
+# : :cloud_with_lightning_and_rain::no_good_man:
 
 # Introduction
 ## Visualizing Weather Data
