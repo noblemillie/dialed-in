@@ -5,7 +5,7 @@ A weather radial is an efficient representation of a geolocation's weather over 
 >For those curious about the underlying science behind this, I invite you to check out this post [KnowRelation] 
 
 ### the what ifs
->( :stopwatch: === dialedIn )
+># ( :stopwatch: === dialedIn )
 ># ?   :snowflake: :ok_man: 
 ># :   :cloud_with_lightning_and_rain: :no_good_man:
 
