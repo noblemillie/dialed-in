@@ -9,6 +9,11 @@ A weather radial is an efficient representation of a geolocation's weather over 
 ># ?   :snowflake: :ok_man: 
 ># :   :cloud_with_lightning_and_rain: :no_good_man:
 
+># ( :stopwatch: === dialedIn ) ? :snowflake: :ok_man: :   :cloud_with_lightning_and_rain: :no_good_man:
+>#  
+># 
+
+
 
 ## How does it work?
 A weather radial is akin to clock :clock2: , with the fundamental difference being the amount of time represented over the circle's 360 degrees. Where standard analog clocks uses 1/12 of the circle to denominate the passage of 1 hour, weather radials use 1/12 of the circle to denominate 1 month. Hence, instead of the ticks between the hours representing minutes of the hour, the ticks 
@@ -19,19 +24,17 @@ See the weather patterns, plan ski/snowboard trip accordingly, live the dream.
 
 Or, for those who prefer emojii-based story-telling:
 
-> ``` const dialedIn = if( ``` :cloud_with_snow: && :thinking: && :stopwatch: ```) { ```
+> # ``` const isDialedIn = if( ``` :cloud_with_snow: && :thinking: && :stopwatch: ```) { ```
 > 
-> ```const [ ``` :smiley: , :business_suit_levitating: ```] = ``` :tram: :mountain_snow: :snowboarder: :skier: :mountain_snow:
-> 
-> ``` return ``` :stuck_out_tongue_closed_eyes: :call_me_hand:
+> # ```const [ ``` :smiley: , :business_suit_levitating: ```] = ``` :tram: :mountain_snow: :snowboarder: :skier: :mountain_snow:
+> # ``` return ``` :stuck_out_tongue_closed_eyes: :call_me_hand:
 > 
 > ``` } else { ```
 > 
-> ``` const [ ``` :man_shrugging: , :frowning_man: ```] = ```:confused::beers::slightly_frowning_face: 
+> # ``` const [ ``` :man_shrugging: , :frowning_man: ```] = ```:confused::beers::slightly_frowning_face: 
+> # ``` return ``` :man_facepalming:
 > 
-> ``` return ``` :man_facepalming:
-> 
-> ```}```   
+> # ```}```   
    
 
 ## Quick Start
