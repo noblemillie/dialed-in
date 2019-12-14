@@ -20,15 +20,15 @@ Just this one:
 # Usage
 See the weather patterns, plan ski/snowboard trip accordingly, live the dream. 
 
-or, for those who prefer emojii-based story-telling:
-## ``` const isDialedIn = if( ``` :cloud_with_snow: && :thinking: && :stopwatch: ```) { ```
-### ```const [ ``` :smiley: , :business_suit_levitating: ```] = ``` :tram: :mountain_snow: :snowboarder: :skier: :mountain_snow:  ```;```
-### ``` return ``` :stuck_out_tongue_closed_eyes: :call_me_hand:  ```;```
-#### ``` } else { ```
-### ``` const [ ``` :man_shrugging: , :frowning_man: ```] = ```:confused::beers::slightly_frowning_face:   ```;```
-### ``` return ```  :man_facepalming:  ```;```
-## ```}```   
-   
+>
+*or, for those who prefer emojii-based story-telling:*
+>#### ``` const isDialedIn = if( ``` :cloud_with_snow: ``` && ``` :thinking: ``` && ``` :stopwatch: ``` ) { ```
+>##### ```const [ ``` :smiley: ``` , ``` :business_suit_levitating: ```] = ``` :tram: :mountain_snow: :snowboarder: :skier: :mountain_snow:  ```;```
+>###### ``` } else { ```
+>##### ``` const [ ``` :man_shrugging: ``` , ``` :frowning_man: ```] = ```:confused::beers::slightly_frowning_face:   ```;```
+>##### ``` return ```  :man_facepalming:  ```;```
+>#### ```}```   
+>
 
 ## Quick Start
 The following terminal commands will clone this repository onto your local machine and open up a local instance of the code in your browser, allowing you to freely modify the code however you like in your text editor of choice (I use VSCode).
