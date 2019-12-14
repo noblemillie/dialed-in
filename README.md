@@ -14,13 +14,12 @@ Just this one:
 <!-- >#  :stopwatch: ``` === isDialedIn  ? ```
 ># ?   :snowflake: :ok_man: :snowflake:  ```:```
 ># :   :cloud_with_lightning_and_rain: :no_good_man: :cloud_with_lightning_and_rain:   ```;``` -->
-###   :stopwatch: ```  === isDialedIn  ? ``` :snowflake: :ok_man: ```:```   :cloud_with_lightning_and_rain: :no_good_man: ```;```
+###   :stopwatch: ```javascript  === isDialedIn  ? ``` :snowflake: :ok_man: ```javascript:```   :cloud_with_lightning_and_rain: :no_good_man: ```javascript;```
 
 
 # Usage
 See the weather patterns, plan ski/snowboard trip accordingly, live the dream. 
 
->
 *or, for those who prefer emojii-based story-telling:*
 >#### ``` const isDialedIn = if( ``` :cloud_with_snow: ``` && ``` :thinking: ``` && ``` :stopwatch: ``` ) { ```
 >##### ```const [ ``` :smiley: ``` , ``` :business_suit_levitating: ```] = ``` :tram: :mountain_snow: :snowboarder: :skier: :mountain_snow:  ```;```
