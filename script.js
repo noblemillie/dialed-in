@@ -1,7 +1,7 @@
 // Dimensions
 const margin = { left: 18, right: 78, top: 78, bottom: 78 };
-let width = 800,
-	height = 800;
+let areaWidth = 1000,
+	areaHeight = 800;
 
 // Data
 let data = [];
@@ -13,19 +13,20 @@ const xScale = d3
 	.domain(d3.extent(days))
 	.range([0, Math.PI * 2]); // range is the diameter of the circle
 
-const yScale = d3.scaleRadial().domain([0, 60]);
+const yScale = d3.scaleRadial().domain([-500, 1000]);
 
 // Generators
 const areaGenerator = d3
 	.areaRadial()
 	.angle(d => xScale(d.date))
-	.innerRadius(d => yScale(d.v0))
+	// .innerRadius(d => yScale(d.v0))
+	.innerRadius(400)
 	.outerRadius(d => yScale(d.v1))
 	.curve(d3.curveBasis);
 
 // Elements
-const svg = d3.select('body').append('svg');
-const g = svg.append('g');
+const areaSvg = d3.select('body').append('svg');
+const g = areaSvg.append('g');
 
 const xAxis = g.append('g').attr('class', 'axis');
 
@@ -49,11 +50,11 @@ const yAxis = g.append('g').attr('class', 'axis');
 
 const yAxisTicks = yAxis
 	.selectAll('.tick')
-	.data(yScale.ticks(5).slice(1))
+	.data(yScale.ticks(10).slice(1))
 	.enter()
 	.append('g')
 	.attr('class', 'tick')
-	.style('opacity', 0.4);
+	.style('opacity', 0.3);
 
 const yAxisCircles = yAxisTicks.append('circle');
 
@@ -64,7 +65,7 @@ const yAxisTextTop = yAxisTicks
 
 const yAxisTextBottom = yAxisTicks
 	.append('text')
-	.attr('dy', 12)
+	.attr('dy', 13)
 	.text(d => d);
 
 // Updater
@@ -81,13 +82,14 @@ onresize = _ => redraw(true);
 //   }, duration * 12);
 
 function redraw(resizing) {
-	const diameter = Math.min(innerWidth, innerHeight);
+	// const diameter = Math.min(innerWidth, innerHeight);
+	const diameter = Math.min(areaWidth, areaHeight);
 	width = diameter - margin.left - margin.right;
 	height = diameter - margin.top - margin.bottom;
 
 	yScale.range([0, height / 2]);
 
-	svg
+	areaSvg
 		.attr('width', width + margin.left + margin.right)
 		.attr('height', height + margin.top + margin.bottom);
 
@@ -134,13 +136,16 @@ function redraw(resizing) {
 
 // Functions for generating random data
 function makeData() {
-	let v0 = randBetween(0, 5);
-	v1 = randBetween(10, 30);
+	// let v0 = randBetween(0, 5);
+	// v1 = randBetween(10, 30);
+
+	let v0 = 500;
+	let v1 = 1000;
 
 	data = days.map(date => {
-		v1 = Math.min(v1 + random([-1.7, 2]), 50);
-		v0 = 5;
-		v0 = Math.min(Math.max(v0 + random([-1, 1]), 1), v1 - 5);
+		// v1 = Math.min(v1 + random([-1.7, 2]), 50);
+		// v0 = 5;
+		// v0 = Math.min(Math.max(v0 + random([-1, 1]), 1), v1 - 5);
 		const obj = {
 			date,
 			v1,

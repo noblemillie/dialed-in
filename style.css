@@ -7,7 +7,7 @@ body {
 svg {
 	background-color: rgba(38, 38, 38, 0.9);
 	margin: 30px;
-	padding: 10vw;
+	padding: 2vw;
 	display: table;
 	border: 1px solid cyan;
 }
@@ -22,19 +22,21 @@ svg {
 .tick circle {
 	fill: none;
 	/* stroke: #888; */
-	stroke: snow;
+	/* stroke: snow; */
+	stroke: cyan;
 }
 
 .tick line {
 	stroke: white;
 	/* stroke: snow; */
-	stroke: #888;
+	/* stroke: #888; */
 }
 
 .tick text {
 	stroke: snow;
 	font-size: 12px;
 	text-anchor: middle;
+	stroke: cyan;
 }
 
 .footer {
