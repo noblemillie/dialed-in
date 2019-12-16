@@ -1,15 +1,20 @@
 body {
 	margin: 0;
 	font-family: 'Helvetica Neue', sans-serif;
-	background-color: rgba(238, 238, 238, 0.9);
+	/* background-color: rgba(238, 238, 238, 0.9); */
+	background-color: rgba(38, 38, 38, 0.9);
 }
 
 svg {
-	background-color: rgba(38, 38, 38, 0.9);
+	/* background-color: rgba(238, 238, 238, 0.5); */
+	border: 1px dashed cyan;
+}
+
+#radial-area {
+	background-color: rgba(238, 238, 238, 0.1);
 	margin: 30px;
-	padding: 2vw;
+	/* padding: 1vw; */
 	display: table;
-	border: 1px solid cyan;
 }
 
 .area {
@@ -19,20 +24,20 @@ svg {
 	stroke-width: 2px;
 }
 
-.tick circle {
+.area-tick circle {
 	fill: none;
 	/* stroke: #888; */
 	/* stroke: snow; */
 	stroke: cyan;
 }
 
-.tick line {
+.area-tick line {
 	stroke: white;
 	/* stroke: snow; */
 	/* stroke: #888; */
 }
 
-.tick text {
+.area-tick text {
 	stroke: snow;
 	font-size: 12px;
 	text-anchor: middle;
@@ -61,13 +66,6 @@ svg {
 	border-radius: 8px;
 	font-weight: 700;
 	font-size: 1.1em;
-	/* align-content: stretch;/ */
-	/* align-content: flex-end; */
-	/* height: 8vmax; */
-	/* height: auto; */
-	/* background-color: rgba(1, 218, 214, 0.9); */
-	/* text-align: center; */
-	/* border: 12px ridge rgba(35, 250, 246, 0.261); */
 }
 .card-credits {
 	display: flex;
@@ -75,11 +73,6 @@ svg {
 	font-size: 1.3em;
 	font-weight: 700;
 	color: rgba(1, 218, 214, 0.69);
-	/* padding: 1px 15px 1px 10px; */
-	/* align-content: flex-end; */
-	/* align-items: flex-end; */
-	/* align-self: flex-end; */
-	/* display: flex; */
 }
 .credits {
 	display: flex;
