@@ -1,20 +1,38 @@
 body {
 	margin: 0;
 	font-family: 'Helvetica Neue', sans-serif;
+	font-family: 'Bungee Hairline', cursive;
 	/* background-color: rgba(238, 238, 238, 0.9); */
-	background-color: rgba(38, 38, 38, 0.9);
+	/* background-color: rgba(8, 8, 8, 0.9); */
+	background-color: black;
 }
 
 svg {
-	/* background-color: rgba(238, 238, 238, 0.5); */
 	border: 1px dashed cyan;
 }
 
-#radial-area {
+#radial-bars {
+	/* margin: 30px; */
+	/* display: table; */
+	background-color: rgba(238, 238, 138, 0.1);
 	background-color: rgba(238, 238, 238, 0.1);
-	margin: 30px;
+	/* height: 30px; */
 	/* padding: 1vw; */
-	display: table;
+	margin: 50px;
+	/* margin-top: -800px; */
+	/* margin-top: -400px; */
+	/* border: 1px dashed blue; */
+}
+
+#radial-area {
+	/* border: 1px dashed cyan; */
+	margin: 50px;
+	/* margin-top: -700px; */
+	/* display: table; */
+	/* background-color: rgba(238, 238, 238, 0.1); */
+	background-color: rgba(238, 138, 238, 0.1);
+	/* opacity: 0.3; */
+	/* padding: 1vw; */
 }
 
 .area {
@@ -80,10 +98,6 @@ svg {
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
-	/* align-self: center; */
-	/* align-items: flex-end; */
-	/* margin: 10px 15px 10px 10px; */
-	/* align-self: flex-end; */
 }
 .credits p {
 	display: flex;
@@ -92,7 +106,6 @@ svg {
 	align-content: center;
 	flex: 1 0 auto;
 	background-color: rbga(1, 1, 1, 0.9);
-	/* align-self: flex-end; */
 }
 .footer a {
 	align-self: flex-end;
@@ -106,5 +119,86 @@ svg {
 	color: rgba(1, 218, 214, 0.6);
 	font-size: 0.9em;
 	font-weight: 100;
-	/* margin: 1px 15px 1px 10px; */
+}
+
+.axis path,
+.axis tick,
+.axis line {
+	fill: none;
+	stroke: none;
+}
+
+.axis text {
+	font-size: 12px;
+	fill: #aaaaaa;
+	font-weight: 400;
+}
+
+.legendTitle {
+	font-size: 14px;
+	/* fill: #4f4f4f; */
+	fill: snow;
+	font-weight: 300;
+}
+
+.january {
+	font-size: 14px;
+	text-anchor: start;
+	font-weight: 500;
+	/* fill: #aaaaaa; */
+	fill: cyan;
+}
+
+.february {
+	font-size: 14px;
+	text-anchor: middle;
+	font-weight: 500;
+	/* fill: #aaaaaa; */
+	fill: rgb(0, 255, 153);
+}
+
+.december {
+	font-size: 14px;
+	text-anchor: start;
+	font-weight: 300;
+	fill: pink;
+}
+
+.yearLine {
+	stroke: #aaaaaa;
+	opacity: 0.9;
+}
+
+.seasonLine {
+	/* stroke: violet; */
+	stroke: purple;
+}
+
+.presentLine {
+	fill: violet;
+	fill: magenta;
+	stroke: white;
+	stroke-width: 5px;
+}
+
+.axisText {
+	fill: #c4c4c4;
+	fill: hsla(259, 58%, 27%, 0.487);
+	font-size: 11px;
+	font-weight: 300;
+	text-anchor: middle;
+	text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.axisCircles {
+	fill: none;
+	stroke: #e8e8e8;
+	stroke-width: 1px;
+}
+
+.subtitle {
+	font-size: 14px;
+	fill: #aaaaaa;
+	font-weight: 300;
+	text-anchor: start;
 }

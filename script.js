@@ -1,8 +1,9 @@
 // Dimensions
-const margin = { left: 18, right: 78, top: 78, bottom: 78 };
+let areaMargin = { left: 50, right: 50, top: 50, bottom: 50 };
 
-let areaWidth = (window.innerWidth - margin.left - margin.right - 10) / 1.05;
-let areaHeight = window.innerHeight - margin.top - margin.bottom - 30;
+let areaWidth =
+	(window.innerWidth - areaMargin.left - areaMargin.right - 0) / 1.01;
+let areaHeight = window.innerHeight - areaMargin.top - areaMargin.bottom;
 
 // Data
 let areaData = [];
@@ -18,7 +19,7 @@ const areaXScale = d3
 	.domain(d3.extent(calendarDate))
 	.range([0, Math.PI * 2]); // range is the diameter of the circle
 
-const areaYScale = d3.scaleRadial().domain([-500, 1000]);
+const areaYScale = d3.scaleRadial().domain([-100, 1000]);
 
 // Generators
 const areaGenerator = d3
@@ -34,7 +35,7 @@ const areaSvg = d3
 	.select('body')
 	.select('#radial-area')
 	.append('svg');
-// .attr('id', 'area-radial');
+// .attr('id', '#radial-area');
 const areaG = areaSvg.append('g');
 
 const areaXAxis = areaG.append('g').attr('class', 'area-axis');
@@ -59,7 +60,7 @@ const areaYAxis = areaG.append('g').attr('class', 'area-axis');
 
 const areaYAxisTicks = areaYAxis
 	.selectAll('.tick')
-	.data(areaYScale.ticks(10).slice(1))
+	.data(areaYScale.ticks(5).slice(1))
 	.enter()
 	.append('g')
 	.attr('class', 'area-tick')
@@ -80,6 +81,8 @@ const areaYAxisTextBottom = areaYAxisTicks
 const label = areaSvg
 	.append('text')
 	.attrs({
+		// y: 15,
+		// x: 50,
 		y: areaHeight - 15,
 		x: areaWidth / 1.05,
 		stroke: 'lavender',
@@ -87,10 +90,11 @@ const label = areaSvg
 		'font-size': '4em',
 		fill: 'violet',
 		'text-anchor': 'end',
-		// 'margin-top': '40vh',
-		opacity: 0.2
+		// 'areaMargin-top': '40vh',
+		opacity: 0.9
 	})
-	.text(currMonth());
+	.text('label');
+// .text(currMonth());
 
 // Updater
 const duration = 2750;
@@ -108,18 +112,18 @@ onresize = _ => redraw(true);
 function redraw(resizing) {
 	// const diameter = Math.min(innerWidth, innerHeight);
 	const diameter = Math.min(areaWidth, areaHeight);
-	width = diameter - margin.left - margin.right;
-	height = diameter - margin.top - margin.bottom;
+	width = diameter - areaMargin.left - areaMargin.right;
+	height = diameter - areaMargin.top - areaMargin.bottom;
 
 	areaYScale.range([0, height / 2]);
 
 	areaSvg
-		.attr('width', width + margin.left + margin.right)
-		.attr('height', height + margin.top + margin.bottom);
+		.attr('width', width + areaMargin.left + areaMargin.right)
+		.attr('height', height + areaMargin.top + areaMargin.bottom);
 
 	areaG.attr(
 		'transform',
-		`translate(${margin.left + width / 2}, ${margin.top + height / 2})`
+		`translate(${areaMargin.left + width / 2}, ${areaMargin.top + height / 2})`
 	);
 
 	areaXAxisTicks.attr('transform', (d, i, e) => {
@@ -189,7 +193,7 @@ function makeData() {
 	// let v0 = randBetween(0, 5);
 	// v1 = randBetween(10, 30);
 
-	let v0 = 0;
+	let v0 = 100;
 	let v1 = 1000;
 
 	areaData = calendarDate.map((date, i) => {

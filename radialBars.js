@@ -1,16 +1,11 @@
 //////////////////// Set up and initiate svg containers ///////////
-var margin = {
-	top: 180,
-	right: 0,
-	bottom: 180,
-	left: 0
-};
-var width = (window.innerWidth - margin.left - margin.right - 10) / 1.5;
+var margin = { left: 150, right: 10, top: 150, bottom: 150 };
+var width = (window.innerWidth - margin.left - margin.right) / 1.4;
 var height = (window.innerHeight - margin.top - margin.bottom) / 1.5;
 
 //SVG container
 var barSvg = d3
-	.select('#weatherRadial')
+	.select('#radial-bars')
 	.append('svg')
 	.attr('width', width + margin.left + margin.right)
 	.attr('height', height + margin.top + margin.bottom)
@@ -25,55 +20,17 @@ var barSvg = d3
 	);
 
 //////////////////// Load weather data ///////////////////
-let barData = [];
-
-d3.json('historical.json', function(w) {
-	var datesArr = [];
-	var fahArr = [];
-	barData = w.data.weather;
-
-	console.log('extract: ', w.data.weather);
-	var dates = barData.forEach(function(d) {
-		datesArr.push(parseDate(d.date));
-		// datesArr.push(+d.maxtempF);
-		// datesArr.push(parseDate(d.date).toDateString());
-		// d.date = parseDate(d.date);
-		// console.log(`date: `, d.date);
-	});
-	var temps = barData.forEach(function(d) {
-		fahArr.push([+d.mintempF, +d.maxtempF]);
-		// datesArr.push(parseDate(d.date).toDateString());
-		// d.date = parseDate(d.date);
-		// console.log(`date: `, d.date);
-	});
-	// console.log(`hist dates and temp: `, datesArr);
-	console.log(`hist temp: `, fahArr);
-
-	return barData;
-});
-
-// convert between celsius and fahrenheit
-function celsiusToFahrenheit(c) {
-	const w = 1.8;
-	const b = 32;
-	const f = c * w + b;
-	return f;
-}
+// let weatherData = [];
 
 //////////////////////////// Create scales /////////////////////////
 //Parses a string into a date
 var parseDate = d3.time.format('%Y-%m-%d').parse;
 
 //Turn strings into actual numbers/dates
-snowfallData.forEach(function(d) {
+weatherData.forEach(function(d) {
 	d.date = parseDate(d.date);
-	// console.log(`snowfallData date: `, d.date);
+	// console.log(`weatherData date: `, d.date);
 });
-
-// historical2018.forEach(function(d) {
-// 	d.date = parseDate(d.date);
-// 	// console.log(`historical2018 date: `, d.date);
-// });
 
 //Set the minimum inner radius and max outer radius of the chart
 var outerRadius = Math.min(width, height, 450) / 2,
@@ -122,7 +79,7 @@ var angle = d3.scale
 	.linear()
 	.range([-180, 180])
 	.domain(
-		d3.extent(snowfallData, function(d) {
+		d3.extent(weatherData, function(d) {
 			return d.date;
 		})
 	);
@@ -344,7 +301,7 @@ var today = [
 
 barWrapper
 	.selectAll('.presentLine')
-	// .data(snowfallData)
+	// .data(weatherData)
 	.data(today)
 	.enter()
 	.append('rect')
@@ -369,7 +326,7 @@ barWrapper
 
 barWrapper
 	.selectAll('.snowBar')
-	.data(snowfallData)
+	.data(weatherData)
 	.enter()
 	.append('rect')
 	.attr('class', 'snowBar')
@@ -393,7 +350,7 @@ barWrapper
 
 barWrapper
 	.selectAll('.maxSnowBar')
-	.data(snowfallData)
+	.data(weatherData)
 	.enter()
 	.append('rect')
 	.attr('class', 'maxSnowBar')
@@ -419,7 +376,7 @@ barWrapper
 // tempBar color is based on the mean temperature
 barWrapper
 	.selectAll('.tempBar')
-	.data(snowfallData)
+	.data(weatherData)
 	.enter()
 	.append('rect')
 	.attr('class', 'tempBar')
@@ -525,5 +482,3 @@ legendsvg
 	.attr('class', 'axis')
 	.attr('transform', 'translate(0,' + 10 + ')')
 	.call(xAxis);
-
-/
