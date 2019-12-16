@@ -467,9 +467,10 @@ var xScale = d3.scale
 	.domain([-15, 30]);
 
 //Define x-axis
-var xAxis = d3.svg
-	.axis()
-	.orient('bottom')
+var xAxis = d3
+	.axisBottom()
+	// .axis()
+	// .orient('bottom')
 	.ticks(5)
 	.tickFormat(function(d) {
 		return d + 'Â°C';

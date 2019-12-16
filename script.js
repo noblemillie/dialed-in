@@ -140,7 +140,7 @@ function redraw(resizing) {
 	areaYAxisTextBottom.attr('y', d => -areaYScale(d));
 
 	// General update pattern for the area, whose data changes
-	const area = g.selectAll('.area').data([areaData]);
+	const area = areaG.selectAll('.area').data([areaData]);
 
 	if (resizing) {
 		area.attr('d', areaGenerator);
@@ -209,7 +209,7 @@ function makeData() {
 		}
 
 		// v1 = 900;
-		v0 = 0;
+		v0 = 50;
 		// v0 = Math.min(Math.max(v0 + random([-1, 1]), 1), v1 - 5);
 		// const obj = {
 		// 	date,
