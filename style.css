@@ -18,9 +18,10 @@ svg {
 	background-color: rgba(238, 238, 238, 0.1);
 	/* height: 30px; */
 	/* padding: 1vw; */
-	margin: 50px;
-	/* margin-top: -800px; */
-	/* margin-top: -400px; */
+	/* margin: 50px; */
+	margin-top: -1000px;
+	margin-left: 150px;
+	opacity: 0.2;
 	/* border: 1px dashed blue; */
 }
 
@@ -176,9 +177,9 @@ svg {
 
 .presentLine {
 	fill: violet;
-	fill: magenta;
+	fill: cyan;
 	stroke: white;
-	stroke-width: 5px;
+	stroke-width: 1px;
 }
 
 .axisText {
