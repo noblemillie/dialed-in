@@ -1,15 +1,39 @@
 body {
 	margin: 0;
 	font-family: 'Helvetica Neue', sans-serif;
-	background-color: rgba(238, 238, 238, 0.9);
+	font-family: 'Bungee Hairline', cursive;
+	/* background-color: rgba(238, 238, 238, 0.9); */
+	/* background-color: rgba(8, 8, 8, 0.9); */
+	background-color: black;
 }
 
 svg {
-	background-color: rgba(38, 38, 38, 0.9);
-	margin: 30px;
-	padding: 2vw;
-	display: table;
-	border: 1px solid cyan;
+	/* border: 1px dashed cyan; */
+	/* padding: 1vw; */
+}
+
+#radial-bars {
+	/* margin: 30px; */
+	/* display: table; */
+	/* background-color: rgba(238, 238, 138, 0.1); */
+	background-color: rgba(2, 2, 2, 0.91);
+	/* height: 30px; */
+	/* margin: 50px; */
+	/* margin-top: -990px; */
+	/* margin-left: 105px; */
+	/* opacity: 0.2; */
+	/* border: 1px dashed blue; */
+}
+
+#radial-area {
+	/* border: 1px dashed cyan; */
+	margin: 50px;
+	/* margin-top: -700px; */
+	/* display: table; */
+	/* background-color: rgba(238, 238, 238, 0.1); */
+	background-color: rgba(238, 138, 238, 0.1);
+	/* opacity: 0.3; */
+	/* padding: 1vw; */
 }
 
 .area {
@@ -19,24 +43,27 @@ svg {
 	stroke-width: 2px;
 }
 
-.tick circle {
+.area-tick circle {
 	fill: none;
 	/* stroke: #888; */
 	/* stroke: snow; */
 	stroke: cyan;
+	opacity: 0.4;
 }
 
-.tick line {
+.area-tick line {
 	stroke: white;
 	/* stroke: snow; */
 	/* stroke: #888; */
+	opacity: 0.3;
 }
 
-.tick text {
+.area-tick text {
 	stroke: snow;
 	font-size: 12px;
 	text-anchor: middle;
 	stroke: cyan;
+	opacity: 0.2;
 }
 
 .footer {
@@ -61,13 +88,6 @@ svg {
 	border-radius: 8px;
 	font-weight: 700;
 	font-size: 1.1em;
-	/* align-content: stretch;/ */
-	/* align-content: flex-end; */
-	/* height: 8vmax; */
-	/* height: auto; */
-	/* background-color: rgba(1, 218, 214, 0.9); */
-	/* text-align: center; */
-	/* border: 12px ridge rgba(35, 250, 246, 0.261); */
 }
 .card-credits {
 	display: flex;
@@ -75,11 +95,6 @@ svg {
 	font-size: 1.3em;
 	font-weight: 700;
 	color: rgba(1, 218, 214, 0.69);
-	/* padding: 1px 15px 1px 10px; */
-	/* align-content: flex-end; */
-	/* align-items: flex-end; */
-	/* align-self: flex-end; */
-	/* display: flex; */
 }
 .credits {
 	display: flex;
@@ -87,10 +102,6 @@ svg {
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
-	/* align-self: center; */
-	/* align-items: flex-end; */
-	/* margin: 10px 15px 10px 10px; */
-	/* align-self: flex-end; */
 }
 .credits p {
 	display: flex;
@@ -99,7 +110,6 @@ svg {
 	align-content: center;
 	flex: 1 0 auto;
 	background-color: rbga(1, 1, 1, 0.9);
-	/* align-self: flex-end; */
 }
 .footer a {
 	align-self: flex-end;
@@ -113,5 +123,87 @@ svg {
 	color: rgba(1, 218, 214, 0.6);
 	font-size: 0.9em;
 	font-weight: 100;
-	/* margin: 1px 15px 1px 10px; */
+}
+
+.axis path,
+.axis tick,
+.axis line {
+	fill: none;
+	stroke: none;
+}
+
+.axis text {
+	font-size: 12px;
+	fill: #aaaaaa;
+	font-weight: 400;
+}
+
+.legendTitle {
+	font-size: 14px;
+	/* fill: #4f4f4f; */
+	fill: snow;
+	font-weight: 300;
+}
+
+.january {
+	font-size: 14px;
+	text-anchor: start;
+	font-weight: 500;
+	/* fill: #aaaaaa; */
+	fill: cyan;
+}
+
+.february {
+	font-size: 14px;
+	text-anchor: middle;
+	font-weight: 500;
+	/* fill: #aaaaaa; */
+	fill: rgb(0, 255, 153);
+}
+
+.december {
+	font-size: 14px;
+	text-anchor: start;
+	font-weight: 300;
+	fill: pink;
+}
+
+.yearLine {
+	stroke: #aaaaaa;
+	opacity: 0.9;
+}
+
+.seasonLine {
+	/* stroke: snow; */
+	/* stroke: lavender; */
+	stroke: purple;
+}
+
+.presentLine {
+	fill: violet;
+	fill: cyan;
+	stroke: white;
+	stroke-width: 1px;
+}
+
+.axisText {
+	fill: #c4c4c4;
+	fill: hsla(259, 58%, 27%, 0.487);
+	font-size: 11px;
+	font-weight: 300;
+	text-anchor: middle;
+	text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.axisCircles {
+	fill: none;
+	stroke: #e8e8e8;
+	stroke-width: 1px;
+}
+
+.subtitle {
+	font-size: 30px;
+	fill: #aaaaaa;
+	/* font-weight: 500; */
+	text-anchor: start;
 }

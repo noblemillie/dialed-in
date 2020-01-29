@@ -1,8 +1,8 @@
 {
     "css.completion.completePropertyWithSemicolon": false,
-    "editor.fontSize": 24,
+    "editor.fontSize": 18,
     "editor.fontWeight": "100",
     "font-switcher.enableLivePreview": true,
     "editor.fontFamily": "Fira Code Mono, monospace",
-    "workbench.colorTheme": "Brogrammer"
+    "workbench.colorTheme": "Deepdark Material Theme | Default Version"
 }
