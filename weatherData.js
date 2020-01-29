@@ -273,7 +273,7 @@ var weatherData = [
 		date: '2019-1-28',
 		curr_year_snow: 0,
 		min_snow: 0,
-		mean_snow: 10,
+		mean_snow: 6,
 		max_snow: 10,
 		max_temp: -4,
 		mean_temp: -7,
@@ -283,7 +283,7 @@ var weatherData = [
 		date: '2019-1-29',
 		curr_year_snow: 0,
 		min_snow: 0,
-		mean_snow: 0,
+		mean_snow: 2,
 		max_snow: 20,
 		max_temp: 0,
 		mean_temp: -6,
@@ -293,7 +293,7 @@ var weatherData = [
 		date: '2019-1-30',
 		curr_year_snow: 0,
 		min_snow: 0,
-		mean_snow: 0,
+		mean_snow: 1,
 		max_snow: 12,
 		max_temp: 1,
 		mean_temp: -3,
@@ -3563,7 +3563,7 @@ var weatherData = [
 		date: '2019-12-23',
 		curr_year_snow: 0,
 		min_snow: 0,
-		mean_snow: 5,
+		mean_snow: 3,
 		max_snow: 4,
 		max_temp: 13,
 		mean_temp: 11,
@@ -3649,4 +3649,4 @@ var weatherData = [
 		mean_temp: 4,
 		min_temp: 1
 	}
-];
+]

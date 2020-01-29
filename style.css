@@ -8,20 +8,20 @@ body {
 }
 
 svg {
-	border: 1px dashed cyan;
+	/* border: 1px dashed cyan; */
+	/* padding: 1vw; */
 }
 
 #radial-bars {
 	/* margin: 30px; */
 	/* display: table; */
-	background-color: rgba(238, 238, 138, 0.1);
-	background-color: rgba(238, 238, 238, 0.1);
+	/* background-color: rgba(238, 238, 138, 0.1); */
+	background-color: rgba(2, 2, 2, 0.91);
 	/* height: 30px; */
-	/* padding: 1vw; */
 	/* margin: 50px; */
-	margin-top: -1000px;
-	margin-left: 150px;
-	opacity: 0.2;
+	/* margin-top: -990px; */
+	/* margin-left: 105px; */
+	/* opacity: 0.2; */
 	/* border: 1px dashed blue; */
 }
 
@@ -48,12 +48,14 @@ svg {
 	/* stroke: #888; */
 	/* stroke: snow; */
 	stroke: cyan;
+	opacity: 0.4;
 }
 
 .area-tick line {
 	stroke: white;
 	/* stroke: snow; */
 	/* stroke: #888; */
+	opacity: 0.3;
 }
 
 .area-tick text {
@@ -61,6 +63,7 @@ svg {
 	font-size: 12px;
 	text-anchor: middle;
 	stroke: cyan;
+	opacity: 0.2;
 }
 
 .footer {
@@ -171,7 +174,8 @@ svg {
 }
 
 .seasonLine {
-	/* stroke: violet; */
+	/* stroke: snow; */
+	/* stroke: lavender; */
 	stroke: purple;
 }
 
@@ -198,8 +202,8 @@ svg {
 }
 
 .subtitle {
-	font-size: 14px;
+	font-size: 30px;
 	fill: #aaaaaa;
-	font-weight: 300;
+	/* font-weight: 500; */
 	text-anchor: start;
 }

@@ -1,7 +1,8 @@
 //////////////////// Set up and initiate svg containers ///////////
 var margin = { left: 10, right: 10, top: 10, bottom: 10 }
 var width = (window.innerWidth - margin.left - margin.right) / 1.4
-var height = (window.innerHeight - margin.top - margin.bottom) / 2
+var height = 900 - margin.top - margin.bottom
+// var height = (window.innerHeight - margin.top - margin.bottom) / 2.0
 
 //SVG container
 var barSvg = d3
@@ -13,7 +14,7 @@ var barSvg = d3
 	.attr(
 		'transform',
 		'translate(' +
-			(margin.left + width / 2) +
+			(margin.left + width / 1.8) +
 			',' +
 			(margin.top + height / 2) +
 			')'
@@ -103,8 +104,8 @@ textWrapper
 textWrapper
 	.append('text')
 	.attr('class', 'subtitle')
-	.attr('x', -150)
-	.attr('y', -outerRadius - 80)
+	.attr('x', -180)
+	.attr('y', -outerRadius - 170)
 	.text('Historic Temperature & Snowfall Ranges')
 
 //Append credit at bottom
@@ -146,11 +147,11 @@ axes
 	.append('text')
 	.attr('class', 'axisText')
 	.attr('y', function(d) {
-		return barScale(d)
+		return barScale(d) - 8
 	})
 	.attr('dy', '0.3em')
 	.text(function(d) {
-		return d + 'Â°C'
+		return d + '°C'
 	})
 
 //Add a line to split the year
@@ -313,7 +314,7 @@ barWrapper
 	.attr('height', function(d, i) {
 		return barScale(innerRadius - 45) - barScale(d.min_temp)
 	})
-	.attr('x', -5)
+	// .attr('x', 5)
 	// .attr('y', -2)
 	.attr('y', function(d, i) {
 		return barScale(20)
@@ -473,7 +474,7 @@ var xAxis = d3
 	// .orient('bottom')
 	.ticks(5)
 	.tickFormat(function(d) {
-		return d + 'Â°C'
+		return d + '°C'
 	})
 	.scale(xScale)
 

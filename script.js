@@ -19,14 +19,14 @@ const areaXScale = d3
 	.domain(d3.extent(calendarDate))
 	.range([0, Math.PI * 2]) // range is the diameter of the circle
 
-const areaYScale = d3.scaleRadial().domain([-100, 1000])
+const areaYScale = d3.scaleRadial().domain([-800, 1500])
 
 // Generators
 const areaGenerator = d3
 	.areaRadial()
 	.angle(d => areaXScale(d.date))
 	.innerRadius(d => areaYScale(d.v0))
-	// .innerRadius(areaYScale(500))
+	// .innerRadius(areaYScale(1000))
 	.outerRadius(d => areaYScale(d.v1))
 	.curve(d3.curveBasis)
 
@@ -70,7 +70,7 @@ const areaYAxisCircles = areaYAxisTicks.append('circle')
 
 const areaYAxisTextTop = areaYAxisTicks
 	.append('text')
-	.attr('dy', -5)
+	.attr('dy', 5)
 	.text(d => d)
 
 const areaYAxisTextBottom = areaYAxisTicks
@@ -195,22 +195,45 @@ function makeData() {
 
 	// let v0 = 100
 	// let v1 = 100
+	let accSnow = 0
 
 	areaData = calendarDate.map((date, i) => {
-		v1 = Math.min(v1 + random([-1.7, 2]), 0)
-		if (i < 100) {
-			v1 = i * 10
+		// v1 = Math.min(v1 + random([-1.7, 2]), 0)
+		// let newSnow = 0
+		if (i === 330) {
+			accSnow = 0
+		}
+		if (i > 330) {
+			let newSnow = Math.random() * 10
+			accSnow = accSnow + newSnow
+			v1 = accSnow + newSnow
+		}
+		if (i === 0) {
+			let newSnow = Math.random() * 100
+			accSnow = 140
+			v1 = accSnow + newSnow
+		}
+		if (i < 70 && i != 0) {
+			let newSnow = Math.random() * 5
+			accSnow = accSnow + newSnow
+			// v1 = accSnow + newSnow
+			v1 = i * (Math.random() * 20)
+			// v1 = v1 + Math.random() * 25
+		}
+		if (i > 70 && i < 100) {
+			let newSnow = Math.random() * 19
+			accSnow = accSnow - newSnow
+			v1 = accSnow
+			// v1 = i * (Math.random() * 20)
+			// v1 = v1 + Math.random() * 25
 		}
 		if (i >= 100 && i < 330) {
 			v1 = 0
 		}
-		if (i >= 330) {
-			v1 = (i - 330) * 5
-		}
 
 		// v1 = 500
 		// v0 = 50
-		v0 = Math.min(Math.max(v0 + random([-1, 1]), 1), v1 - 5)
+		// v0 = Math.min(Math.max(v0 + random([-1, 1]), 1), v1 - 5)
 		// const obj = {
 		// 	date,
 		// 	v1,
@@ -223,9 +246,13 @@ function makeData() {
 			v0
 		}
 
-		// console.log(`obj*********: `, obj);
 		return obj
 	})
+	// console.log(
+	// 	`areaData*********: `,
+	// 	// areaData.map(d => console.log(`v1: `, d.v1))
+	// 	areaData.filter(d => d.v1)
+	// )
 }
 
 function randBetween(min, max) {
